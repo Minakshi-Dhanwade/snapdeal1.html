@@ -1675,6 +1675,10 @@
                 display: none;
             }
         }
+        /* Responsive Styles */
+
+
+
     </style>
 </head>
 
@@ -1973,6 +1977,7 @@
                 </div>
             </div>
         </div>
+        <button class="mobile-menu-btn">☰</button>
     </nav>
     <!-- Top navigation ends -->
 
@@ -3728,6 +3733,16 @@
     // Code for login slider card ends
 
 
+// Mobile menu functionality
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.sidemenu').classList.toggle('active');
+});
 
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-area a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('.sidemenu').classList.remove('active');
+    });
+});
 
 </script>
